@@ -20,6 +20,6 @@ function getRandomInt(max) {
 
 function getHumanChoice() {
   const input = prompt('Type "rock", "paper", or "scissors"')
-  return input.toLowerCase
+  return input
 }
 
