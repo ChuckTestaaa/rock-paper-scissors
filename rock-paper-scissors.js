@@ -65,8 +65,7 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+
 
 playRound(humanSelection, computerSelection);
 
@@ -76,7 +75,8 @@ function playGame() {
 
   const rounds = 5
   for(let i = 0; i < rounds; i++) {
-    
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
   }
 }
 
