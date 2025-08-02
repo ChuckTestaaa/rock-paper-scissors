@@ -1,5 +1,4 @@
-let humanScore = 0
-let computerScore = 0
+
 
 function getComputerChoice() {
   let max = 3
@@ -70,4 +69,14 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
+
+function playGame() {
+  let humanScore = 0
+  let computerScore = 0
+
+  const rounds = 5
+  for(let i = 0; i < rounds; i++) {
+    
+  }
+}
 
