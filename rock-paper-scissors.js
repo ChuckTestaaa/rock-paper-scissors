@@ -35,6 +35,8 @@ function playRound(humanChoice, computerChoice) {
         humanScore++
       } else {
         console.log("Draw! Rock can't beat Rock")
+        humanScore++
+        computerScore++
       }
       break
     case 'paper':
@@ -46,6 +48,8 @@ function playRound(humanChoice, computerChoice) {
         computerScore++
       } else {
         console.log("Draw! Paper can't beat Paper")
+        humanScore++
+        computerScore++
       }
       break
     case 'scissors':
@@ -57,6 +61,8 @@ function playRound(humanChoice, computerChoice) {
         humanScore++
       } else {
         console.log("Draw! Scissors can't beat Scissors")
+        humanScore++
+        computerScore++
       }
       break
 
