@@ -80,6 +80,12 @@ function playGame() {
     playRound(humanSelection, computerSelection)
   }
 
- 
+  if(humanScore > computerScore) {
+    console.log('You win!')
+  } else if (humanScore < computerScore) {
+    console.log('You lose!')
+  } else {
+    console.log('Draw!')
+  }
 }
 
