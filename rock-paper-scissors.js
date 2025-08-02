@@ -23,3 +23,51 @@ function getHumanChoice() {
   return input
 }
 
+function playRound(humanChoice, computerChoice) {
+  humanChoice = humanChoice.toLowerCase()
+
+  switch(humanChoice) {
+    case 'rock':
+      if(computerChoice === 'paper' ) {
+        console.log('You lose! Paper beats Rock')
+        computerScore++
+      } else if (computerChoice === 'scissors') {
+        console.log('You win! Rock beats Scissors')
+        humanScore++
+      } else {
+        console.log("Draw! Rock can't beat Rock")
+      }
+      break
+    case 'paper':
+      if(computerChoice === 'rock' ) {
+        console.log('You win! Paper beats Rock')
+        humanScore++
+      } else if (computerChoice === 'scissors') {
+        console.log('You lose! Scissors beats Rock')
+        computerScore++
+      } else {
+        console.log("Draw! Paper can't beat Paper")
+      }
+      break
+    case 'scissors':
+      if(computerChoice === 'rock' ) {
+        console.log('You lose! Rock beats Scissors')
+        computerScore++
+      } else if (computerChoice === 'paper') {
+        console.log('You win! Scissors beats Paper')
+        humanScore++
+      } else {
+        console.log("Draw! Scissors can't beat Scissors")
+      }
+      break
+
+    default:
+      console.log("Invalid values")
+  }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
