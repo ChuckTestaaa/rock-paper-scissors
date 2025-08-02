@@ -67,7 +67,6 @@ function playRound(humanChoice, computerChoice) {
 
 
 
-playRound(humanSelection, computerSelection);
 
 function playGame() {
   let humanScore = 0
@@ -75,8 +74,12 @@ function playGame() {
 
   const rounds = 5
   for(let i = 0; i < rounds; i++) {
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
+    const humanSelection = getHumanChoice()
+    const computerSelection = getComputerChoice()
+
+    playRound(humanSelection, computerSelection)
   }
+
+ 
 }
 
