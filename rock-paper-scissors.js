@@ -17,3 +17,9 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+function getHumanChoice() {
+  const input = prompt('Type "rock", "paper", or "scissors"')
+  return input
+}
+
+console.log(getHumanChoice())
