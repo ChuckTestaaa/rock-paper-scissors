@@ -1,5 +1,6 @@
-playGame()
-
+let humanScore = 0
+let computerScore = 0
+playGame();
 function getComputerChoice() {
   let max = 3
   let randomNumber = getRandomInt(max)
@@ -75,8 +76,7 @@ function playRound(humanChoice, computerChoice) {
 
 
 function playGame() {
-  let humanScore = 0
-  let computerScore = 0
+  
 
   const rounds = 5
   for(let i = 0; i < rounds; i++) {
@@ -94,4 +94,6 @@ function playGame() {
     console.log('Draw!')
   }
 }
+
+
 
