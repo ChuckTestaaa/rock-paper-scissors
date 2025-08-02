@@ -1,4 +1,3 @@
-console.log('Hello World')
 
 function getComputerChoice() {
   let max = 3
@@ -22,4 +21,3 @@ function getHumanChoice() {
   return input
 }
 
-console.log(getHumanChoice())
