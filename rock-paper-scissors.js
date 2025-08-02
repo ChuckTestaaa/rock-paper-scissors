@@ -1,3 +1,5 @@
+let humanScore = 0
+let computerScore = 0
 
 function getComputerChoice() {
   let max = 3
@@ -18,6 +20,6 @@ function getRandomInt(max) {
 
 function getHumanChoice() {
   const input = prompt('Type "rock", "paper", or "scissors"')
-  return input
+  return input.toLowerCase
 }
 
