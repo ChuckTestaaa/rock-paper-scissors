@@ -1,20 +1,30 @@
 let humanScore = 0
 let computerScore = 0
 
-let choices = document.querySelector("#choices");
+let choices = document.querySelector('#choices');
+
+const score = document.querySelector('#score');
+const result = document.querySelector('#result')
+
 
 
 choices.addEventListener('click', (event) => {
   let playerSelection = event.target;
 
   playRound(playerSelection.id, getComputerChoice());
+
+  if (humanScore === 5 && computerScore === 5) {
+    result.textContent = `Draw!`;
+
+  } else if (humanScore === 5) {
+    result.textContent = `Human Wins!`;
+  } else if (computerScore === 5) {
+    result.textContent = `Computer Wins!`;
+  }
+
+
+
 });
-
-
-
-
-
-
 
 
 
@@ -54,47 +64,41 @@ function playRound(humanChoice, computerChoice) {
   switch (humanChoice) {
     case 'rock':
       if (computerChoice === 'paper') {
-        console.log('You lose! Paper beats Rock')
         computerScore++
       } else if (computerChoice === 'scissors') {
-        console.log('You win! Rock beats Scissors')
         humanScore++
       } else {
-        console.log("Draw! Rock can't beat Rock")
         humanScore++
         computerScore++
       }
-      break
+      break;
     case 'paper':
       if (computerChoice === 'rock') {
-        console.log('You win! Paper beats Rock')
         humanScore++
       } else if (computerChoice === 'scissors') {
-        console.log('You lose! Scissors beats Rock')
         computerScore++
       } else {
-        console.log("Draw! Paper can't beat Paper")
         humanScore++
         computerScore++
       }
-      break
+      break;
     case 'scissors':
       if (computerChoice === 'rock') {
-        console.log('You lose! Rock beats Scissors')
         computerScore++
       } else if (computerChoice === 'paper') {
-        console.log('You win! Scissors beats Paper')
         humanScore++
       } else {
-        console.log("Draw! Scissors can't beat Scissors")
         humanScore++
         computerScore++
       }
-      break
-
+      break;
     default:
       console.log("Invalid values")
   }
+
+  score.textContent = `Human score: ${humanScore}, Computer score: ${computerScore}`;
+
+
 }
 
 
